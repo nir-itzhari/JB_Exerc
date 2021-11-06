@@ -1,6 +1,6 @@
 let myOrder
+let myCustomer
 let lastOrderId = 1;
-
 
 class Person {
     constructor(firstName, lastName) {
@@ -24,20 +24,13 @@ class Address extends Person {
     }
 }
 
-
-
 class Customer extends Address {
     constructor(firstName, lastName, city, street, buildingNumber) {
         super(city, street, buildingNumber, firstName, lastName)
         super.getAddress()
         super.getFullName()
-
-
     }
 }
-
-const myCustomer = new Customer('Rosh Ha"ayin', 'Hashmonaim', 6, 'Haim', 'Rubin')
-
 
 class item {
     constructor(itemID, itemName, itemPrice) {
@@ -54,6 +47,7 @@ const itemsList = [
     new item(2, "TV", 3700),
     new item(3, "XBOX", 2500)
 ]
+
 class Order {
     constructor(orderID, customerDetails) {
         this.orderID = orderID
@@ -64,7 +58,6 @@ class Order {
         this.items.push(
             new item(itemID, itemName, itemPrice)
         )
-
     }
     getTotalPrice() {
         let itemsPrice = 0
@@ -75,11 +68,7 @@ class Order {
         return itemsPrice
     }
 }
-
 myOrder = new Order(1, myCustomer)
-//myOrder.addItemToOrder(5, 'Pc', '2000₪')
-//console.log(myCustomer)
-//console.log(myOrder)
 
 class UiRender {
     constructor() {
@@ -215,7 +204,6 @@ Building Number : ${myOrder.customerDetails.buildingNumber}.
 <div id="itemslist">
 </div>
 </div>
-
 </div>
 `
     if ($('#itemslist').length > 0) {
