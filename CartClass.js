@@ -12,7 +12,7 @@ class Person {
     }
 }
 
-class Address extends Person{
+class Address extends Person {
     constructor(city, street, buildingNumber, firstName, lastName) {
         super(firstName, lastName)
         this.city = city;
@@ -31,7 +31,7 @@ class Customer extends Address {
         super(city, street, buildingNumber, firstName, lastName)
         super.getAddress()
         super.getFullName()
-        
+
 
     }
 }
@@ -51,9 +51,9 @@ class item {
 }
 const itemsList = [
     new item(5, "PC", 5700),
-     new item(2, "TV", 3700),
-     new item(3, "XBOX", 2500)
- ]
+    new item(2, "TV", 3700),
+    new item(3, "XBOX", 2500)
+]
 class Order {
     constructor(orderID, customerDetails) {
         this.orderID = orderID
@@ -76,7 +76,7 @@ class Order {
     }
 }
 
-myOrder = new Order (1, myCustomer)
+myOrder = new Order(1, myCustomer)
 //myOrder.addItemToOrder(5, 'Pc', '2000₪')
 //console.log(myCustomer)
 //console.log(myOrder)
