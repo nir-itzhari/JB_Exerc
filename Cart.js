@@ -61,7 +61,6 @@ Order.prototype.getTotalPrice = function () {
 
 function UiRender() {
     this.renderReadPerson = function () {
-        //const divPerson = $("<div/>").attr('id', 'person').appendTo('#cart')
         const firstNameLabel = $('<lable/>').text('First Name:')
         firstNameLabel.attr('for', 'firstName')
         const firsNameInput = $("<input/>").attr('name', 'firstName')
@@ -71,7 +70,6 @@ function UiRender() {
         $('#cart').append(firstNameLabel, firsNameInput, lastNameLabel, lastNameInput)
     }
     this.renderReadAddress = function () {
-        //   const divAddressContainer = $("<div/>")
         const cityLabel = $('<lable/>')
         cityLabel.text('City:')
         cityLabel.attr('for', 'city')
