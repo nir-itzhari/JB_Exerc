@@ -87,7 +87,7 @@ function UiRender() {
         buildingNumberLabel.attr('for', 'buildingNumber')
         const buildingNumberInput = $("<input/>")
         buildingNumberInput.attr('type', 'text')
-        buildingNumberInput.attr('name', 'buildingNumber') //.text(address.buildingNumber)
+        buildingNumberInput.attr('name', 'buildingNumber')
         $('#cart').append(cityLabel, InputCity, streetLabel, InputSteet, buildingNumberLabel, buildingNumberInput,)
     }
     this.renderReadItem = function () {
@@ -165,7 +165,7 @@ const showBtn = $('<button/>').on('click', function (event) {
 <h5>Customer Details</h5>
 <div>
   <p>
-  First Name : ${myOrder.customerDetails.firstName}
+  First Name : ${myOrder.customerDetails.firstName}.
   </p>
   <p>
   Last Name : ${myOrder.customerDetails.lastName}.
