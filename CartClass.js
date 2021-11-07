@@ -23,7 +23,7 @@ class Customer extends Person {
         this.Address = new Address(city, street, buildingNumber)
     }
 }
-class item {
+class Item {
     constructor(itemID, itemName, itemPrice) {
         this.itemID = itemID
         this.itemName = itemName
@@ -31,9 +31,9 @@ class item {
     }
 }
 const itemsList = [
-    new item(5, "PC", 5700),
-    new item(2, "TV", 3700),
-    new item(3, "XBOX", 2500)
+    new Item(5, "PC", 5700),
+    new Item(2, "TV", 3700),
+    new Item(3, "XBOX", 2500)
 ]
 
 class Order {
@@ -44,7 +44,7 @@ class Order {
     }
     addItemToOrder(itemID, itemName, itemPrice) {
         this.items.push(
-            new item(itemID, itemName, itemPrice)
+            new Item(itemID, itemName, itemPrice)
         )
     }
     getTotalPrice() {
