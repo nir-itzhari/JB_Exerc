@@ -20,7 +20,7 @@ class Person {
 
 class Customer extends Person {
     constructor(firstName, lastName, city, street, buildingNumber) {
-        super(firstName, lastName, city, street, buildingNumber)
+        super(firstName, lastName)
         this.Address = new Address(city, street, buildingNumber)
     }
 }
