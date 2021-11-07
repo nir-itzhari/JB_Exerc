@@ -1,9 +1,9 @@
 let myOrder
 let lastOrderId = 1;
 const itemsList = [
-    new item(5, "PC", 5700),
-    new item(2, "TV", 3700),
-    new item(3, "XBOX", 2500)
+    new Item(5, "PC", 5700),
+    new Item(2, "TV", 3700),
+    new Item(3, "XBOX", 2500)
 ]
 
 
@@ -33,7 +33,7 @@ Customer.prototype.CustomerDetails = function () {
     return this.firstName + ' ' + this.lastName
 }
 
-function item(itemID, itemName, itemPrice) {
+function Item(itemID, itemName, itemPrice) {
     this.itemID = itemID
     this.itemName = itemName
     this.itemPrice = itemPrice
