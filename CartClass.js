@@ -1,6 +1,13 @@
 let myOrder
 let myCustomer
 let lastOrderId = 1;
+class Address {
+    constructor(city, street, buildingNumber) {
+        this.city = city;
+        this.street = street;
+        this.buildingNumber = buildingNumber;
+    }
+}
 
 class Person {
     constructor(firstName, lastName) {
@@ -12,26 +19,12 @@ class Person {
     }
 }
 
-class Address extends Person {
-    constructor(city, street, buildingNumber, firstName, lastName) {
-        super(firstName, lastName)
-        this.city = city;
-        this.street = street;
-        this.buildingNumber = buildingNumber;
-    }
-    getAddress() {
-        return this.city + ' ' + this.street + ' ' + this.buildingNumber
-    }
-}
-
-class Customer extends Address {
+class Customer extends Person {
     constructor(firstName, lastName, city, street, buildingNumber) {
-        super(city, street, buildingNumber, firstName, lastName)
-        super.getAddress()
-        super.getFullName()
+        super(firstName, lastName, city, street, buildingNumber)
+        this.Address = new Address(city, street, buildingNumber)
     }
 }
-
 class item {
     constructor(itemID, itemName, itemPrice) {
         this.itemID = itemID
