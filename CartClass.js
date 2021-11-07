@@ -31,9 +31,6 @@ class item {
         this.itemName = itemName
         this.itemPrice = itemPrice
     }
-    getItem() {
-        return this.itemID + ' ' + this.itemName + ' ' + this.itemPrice
-    }
 }
 const itemsList = [
     new item(5, "PC", 5700),
@@ -180,13 +177,13 @@ const showBtn = $('<button/>').on('click', function (event) {
 <h5>Shipping Address</h5>
 <div>
 <p>
-City : ${myOrder.customerDetails.city}.
+City : ${myOrder.customerDetails.Address.city}.
 </p>
 <p>
-Street : ${myOrder.customerDetails.street}.
+Street : ${myOrder.customerDetails.Address.street}.
 </p>
 <p>
-Building Number : ${myOrder.customerDetails.buildingNumber}.
+Building Number : ${myOrder.customerDetails.Address.buildingNumber}.
   </p>
 </div>
 <h5>Items To Order</h5>
