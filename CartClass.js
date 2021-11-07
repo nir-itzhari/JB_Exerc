@@ -8,7 +8,6 @@ class Address {
         this.buildingNumber = buildingNumber;
     }
 }
-
 class Person {
     constructor(firstName, lastName) {
         this.firstName = firstName
