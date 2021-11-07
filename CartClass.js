@@ -17,10 +17,9 @@ class Person {
         return this.firstName + ' ' + this.lastName
     }
 }
-
 class Customer extends Person {
     constructor(firstName, lastName, city, street, buildingNumber) {
-        super(firstName, lastName)
+        super(firstName, lastName, city, street, buildingNumber)
         this.Address = new Address(city, street, buildingNumber)
     }
 }
