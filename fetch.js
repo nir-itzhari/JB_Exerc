@@ -15,7 +15,7 @@ function RenderPosts(posts) {
             .addClass('titles')
             .html(post.title)
             .appendTo(githubUsersRef)
-    }
+    } 
 }
 
 $('body').on('click', 'div.titles', function () {

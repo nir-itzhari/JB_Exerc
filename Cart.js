@@ -104,7 +104,7 @@ function UiRender() {
             opt.appendTo(select)
         }
         select.appendTo('#cart')
-    }
+    } 
     this.renderReadAll = function () {
         rendeR.renderReadPerson()
         rendeR.renderReadAddress()

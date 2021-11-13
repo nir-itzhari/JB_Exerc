@@ -13,7 +13,7 @@ class Person {
         this.firstName = firstName
         this.lastName = lastName
     }
-    getFullName() {
+    get FullName() {
         return this.firstName + ' ' + this.lastName
     }
 }
@@ -47,7 +47,7 @@ class Order {
             new Item(itemID, itemName, itemPrice)
         )
     }
-    getTotalPrice() {
+    getTotalPrice =() => {
         let itemsPrice = 0
 
         for (let item of this.items) {
