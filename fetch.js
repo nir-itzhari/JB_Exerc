@@ -1,5 +1,5 @@
 
-const githubUsersRef = document.querySelector('#container')
+const container = document.querySelector('#container')
 function getPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => { return response.json() })
@@ -7,26 +7,26 @@ function getPosts() {
 }
 
 function RenderPosts(posts) {
-    $(githubUsersRef).empty()
+    $(container).empty()
     $('.header').html('Posts Titles')
     for (let post of posts) {
         $('<div/>').attr('data-id', post.id)
             .attr('data-body', post.body)
             .addClass('titles')
             .html(post.title)
-            .appendTo(githubUsersRef)
+            .appendTo(container)
     } 
 }
 
 $('body').on('click', 'div.titles', function () {
-    $(githubUsersRef).hide('blind')
+    $(container).hide('blind')
     $('.header').html('Posts Comments')
 
 
     const button = $('<button/>').on('click', () => {
         $('.header').html('Posts Titles')
         $('#postDetails').empty()
-        $(githubUsersRef).show('blind')
+        $(container).show('blind')
     })
         .addClass('btn btn-dark button')
         .html('Return to Posts')
