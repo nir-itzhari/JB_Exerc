@@ -1,12 +1,12 @@
 
 const container = document.querySelector('#container')
-function getPosts() {
+const getPosts = () => {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => { return response.json() })
         .then((posts) => { RenderPosts(posts) })
 }
 
-function RenderPosts(posts) {
+const RenderPosts = (posts) => {
     $(container).empty()
     $('.header').html('Posts Titles')
     for (let post of posts) {
@@ -22,15 +22,15 @@ $('body').on('click', 'div.titles', function () {
     $(container).hide('blind')
     $('.header').html('Posts Comments')
 
-
-    const button = $('<button/>').on('click', () => {
+    const returnToTitles = () => {
         $('.header').html('Posts Titles')
-        $('#postDetails').empty()
-        $(container).show('blind')
-    })
+            $('#postDetails').empty()
+            $(container).show('blind')
+    }
+    
+    const button = $('<button/>').on('click', returnToTitles)
         .addClass('btn btn-dark button')
         .html('Return to Posts')
-
 
     const title = $('<h2/>').html($(this).html())
                   .addClass('post')
@@ -41,18 +41,13 @@ $('body').on('click', 'div.titles', function () {
     $('#postDetails').append(button, title, body)
     getComments($(this).attr('data-id'))
 })
-
-function getComments(postId) {
+const getComments = (postId) => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
-        .then((response) => {
-            return response.json()
-        })
-        .then((comments) => {
-            RenderComments(comments)
-        })
+        .then((response) => {return response.json()})
+        .then((comments) => {RenderComments(comments)})
 }
 
-function RenderComments(comments) {
+const RenderComments =(comments) => {
     for (let comment of comments) {
         $('<p/>')
             .addClass('comment')
