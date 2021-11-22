@@ -6,9 +6,9 @@ const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(__dirname + '/public'))
+app.use(express.static('public'))
 app.get('/', function (req, res) {
-    const fileFullName = path.join(__dirname, './index.html')
+    const fileFullName = path.join(__dirname, './public/fetch.html')
     fs.readFile(fileFullName, 'utf-8', (error, htmlString) => {
         console.log(console.log(error))
         res.send(htmlString)
@@ -34,7 +34,7 @@ app.post('/register', (req, res) => {
     }
     checkResponse()
 })
-app.listen(3000)
+app.listen(3030)
 
 
 
