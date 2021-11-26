@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
 
-app.get('/1978', function (req, res) {
+app.get('/:bornYear', function (req, res) {
 
-    res.send('You whare born in 1978')
+    res.send('You whare born in '+ req.params.bornYear)
 
 })
 
