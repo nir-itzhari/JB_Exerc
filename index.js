@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
         res.send(htmlString)
     })
 })
-let personsArray = []
+const personsArray = []
 app.post('/persons', (req, res) => {
     personsArray.push(req.body)
     console.log(personsArray)
