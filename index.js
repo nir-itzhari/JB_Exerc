@@ -22,12 +22,16 @@ app.post('/persons', (req, res) => {
 })
 
 app.get('/persons/:id', (req, res) => {
- const { userId } = personsArray[0];
-    if (req.params.id === userId ) {
-        return res.send(personsArray[0])
-
+    const { userId } = personsArray[0];
+    if (req.params.id === userId) {
+        return res.send(
+            '<ul style="font-size:20px"><span style="font-size: 26px">User Details:</span>' +
+            '<li><b> Name: </b>' + personsArray[0].firstName + '</li>' +
+            '<li><b> Last Name: </b>' + personsArray[0].lastName + '</li>' +
+            '<li><b> ID: </b>' + personsArray[0].userId + '</li>'
+        )
     }
-    return res.json({ message: 'This person doesn\'t exist' })
+    return res.send('<h2 style="text-align: center; margin-top:200px"><b>message: ' + '<span style="color: red">' +'This person doesn\'t exist<span></b></h2>' )
 
 })
 
