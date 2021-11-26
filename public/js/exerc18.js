@@ -8,7 +8,7 @@ class User {
         const firstName = this.firstName
         const lastName = this.lastName
         const userId = this.userId
-        console.log(firstName, lastName, userId)
+
         sendName({ firstName, lastName, userId })
     }
 }
@@ -41,4 +41,6 @@ function inputsValSend() {
     user.getName()
 }
 
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', inputsValSend)
 
