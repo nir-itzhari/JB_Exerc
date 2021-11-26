@@ -41,3 +41,4 @@ function inputsValSend() {
     user.getName()
 }
 
+
