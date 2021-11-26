@@ -36,7 +36,8 @@ function inputsValSend() {
         lastName: formRef.elements.lastName.value,
         userId: formRef.elements.userId.value,
     }
-    const user = new User(inputsValue.firstName ,inputsValue.lastName,inputsValue.userId)
+    const { firstName, lastName, userId } = inputsValue
+    const user = new User(firstName, lastName, userId)
     user.getName()
 }
 
