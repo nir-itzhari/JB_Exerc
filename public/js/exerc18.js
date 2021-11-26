@@ -13,7 +13,7 @@ class User {
     }
 }
 
-function sendName(data) {
+const sendName = (data) => {
     fetch('http://localhost:3000/persons', {
         method: 'POST',
         body: JSON.stringify(data),
@@ -29,7 +29,7 @@ function sendName(data) {
         })
 }
 
-function inputsValSend() {
+const inputsValSend = () => {
     const formRef = document.querySelector('#form')
     const inputsValue = {
         firstName: formRef.elements.firstName.value,
