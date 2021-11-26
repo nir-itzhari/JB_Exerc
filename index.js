@@ -22,9 +22,10 @@ app.post('/persons', (req, res) => {
 })
 
 app.get('/persons/:id', (req, res) => {
-    res.statusCode = 404;
-    res.setHeader('Content-Type', 'text/plain');
-    if (req.params.id === personsArray[0].userId) {
+ //   res.statusCode = 404;
+ //   res.setHeader('Content-Type', 'text/plain')
+ const { userId } = personsArray[0];
+    if (req.params.id === userId ) {
         return res.send(personsArray[0])
 
     }
